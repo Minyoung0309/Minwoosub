@@ -17,6 +17,7 @@ public class EnforceManager : MonoBehaviour
         enforceWeaponButton = GameObject.Find("EnforceWeaponButton").GetComponent<Button>();
         upgradeWeaponButton = GameObject.Find("UpgradeWeaponButton").GetComponent<Button>();
 
+
     }
     public bool ActivationBox()
     {

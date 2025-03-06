@@ -594,6 +594,7 @@ MonoBehaviour:
   weaponStatus: {fileID: 0}
   gameManager: {fileID: 0}
   level: {fileID: 129849284612975169}
+  grade: {fileID: 0}
 --- !u!1 &5209778808545723151
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +744,7 @@ MonoBehaviour:
   weaponStatus: {fileID: 0}
   gameManager: {fileID: 0}
   level: {fileID: 1738340804693241934}
+  grade: {fileID: 0}
 --- !u!1 &8911772857773759289
 GameObject:
   m_ObjectHideFlags: 0

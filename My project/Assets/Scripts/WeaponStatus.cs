@@ -22,7 +22,7 @@ public class WeaponStatus : MonoBehaviour
     {
         var repo = BGRepo.I;
         var userInfo = repo.GetMeta("UserInfo");
-        var itemTable = repo["ItemTable"];
+        var itemTable = repo.GetMeta("ItemTable");
         userInfo.ForEachEntity(entity =>
         {
             if (entity.Get<string>("name") == "minyoung")

@@ -344,6 +344,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184605284}
   m_CullTransparentMesh: 1
+--- !u!114 &261949146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1738340804693241934, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+  m_PrefabInstance: {fileID: 1973212760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &318493763
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,11 +399,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd7ad4e2439a464cb31a02ee86c9559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  gold: 100
-  enforceGold: 10
   bossStatus: {fileID: 0}
   weaponStatus: {fileID: 0}
+  count: 0
+  gold: 100
+  enforceGold: 0
+  inventory:
+  - minyoung's tear
+--- !u!114 &390529765 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5632775623630988739, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+  m_PrefabInstance: {fileID: 1973212760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4878c36eeeca16e4b89a9d321f2ffbaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &416585291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,6 +1264,17 @@ PrefabInstance:
       addedObject: {fileID: 1679252581}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b9a6b1d2a80f0146bcfb95f07eb8aa1, type: 3}
+--- !u!114 &843321892 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 129849284612975169, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+  m_PrefabInstance: {fileID: 1973212760}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1015135629
 GameObject:
   m_ObjectHideFlags: 0
@@ -3532,6 +3567,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1582670104109414814, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_Name
+      value: Level
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738340804693241934, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_text
+      value: normal
+      objectReference: {fileID: 0}
     - target: {fileID: 1802070814116685815, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
       propertyPath: m_Name
       value: Enforce_Canvas
@@ -3540,10 +3583,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2142508892706148695, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpgradeWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142508892706148695, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UpgradeWeaponButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2184001652960267209, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 318493765}
+    - target: {fileID: 2188332363544841572, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: grade
+      value: 
+      objectReference: {fileID: 261949146}
+    - target: {fileID: 2188332363544841572, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: level
+      value: 
+      objectReference: {fileID: 843321892}
     - target: {fileID: 2188332363544841572, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
       propertyPath: gameManager
       value: 
@@ -3633,6 +3692,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5632775623630988739, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: grade
+      value: 
+      objectReference: {fileID: 261949146}
+    - target: {fileID: 5632775623630988739, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 318493765}
@@ -3655,6 +3718,26 @@ PrefabInstance:
     - target: {fileID: 7389644642546535421, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -129
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303682872017615991, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 390529765}
+    - target: {fileID: 8303682872017615991, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303682872017615991, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnfoceWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303682872017615991, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UpgradeWeaponButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911772857773759289, guid: 857856e393f1dd24d8e66fa0019e7e32, type: 3}
+      propertyPath: m_Name
+      value: Grade
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
