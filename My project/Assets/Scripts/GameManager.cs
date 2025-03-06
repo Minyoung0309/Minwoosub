@@ -9,9 +9,10 @@ public class GameManager : MonoBehaviour
     BlueWeaponStatus blueWeaponStatus;
     void Start()
     {
+
         bossStatus = gameObject.AddComponent<BossStatus>();
         redWeaponStatus = GameObject.Find("RedWeapon").GetComponent<RedWeaponStatus>();
-        redWeaponStatus.initialize(1, 0, 0.3);
+        redWeaponStatus.initialize(1, 0, 0.3f);
         blueWeaponStatus = GameObject.Find("BlueWeapon").GetComponent<BlueWeaponStatus>();
         blueWeaponStatus.initialize(1, 2, 5);
     }

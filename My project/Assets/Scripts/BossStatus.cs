@@ -4,8 +4,9 @@ using UnityEngine.UIElements;
 
 public class BossStatus : MonoBehaviour
 {
-    public double hp = 10000;
-    public double maxhp = 10000;
+    public HealthBarController healthBarController;
+    public float hp = 10000;
+    public float maxhp = 10000;
     public int count = 0;
     public int defence = 1;
    
@@ -14,13 +15,12 @@ public class BossStatus : MonoBehaviour
         hp = maxhp;
     }
 
-    public void hit(double damage, double denyDefence)
+    public void hit(float damage, float denyDefence)
     {
         if (hp > 0)
         {
             damage = (damage * (1 - defence * (1 - denyDefence)));
             hp -= damage;
-            Debug.Log("현재 체력 : " + Math.Ceiling(hp));
 
         }
         if( hp < 0)
@@ -28,5 +28,23 @@ public class BossStatus : MonoBehaviour
             Debug.Log("다이");
         }
         
+    }
+    
+    public void Initialize(float maxStamina)
+    {
+        maxhp = maxStamina;
+        hp = maxhp;
+        healthBarController.UpdateHealth(hp / maxhp);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        hp -= damage;
+        if (hp < 0)
+        {
+            hp = 0;
+        }
+
+        healthBarController.UpdateHealth(hp / maxhp);
     }
 }
