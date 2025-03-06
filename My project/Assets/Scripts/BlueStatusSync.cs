@@ -3,18 +3,16 @@ using UnityEngine;
 
 public class BlueStatusSync : MonoBehaviour
 {
-    public BlueWeaponStatus blueWeaponStatus;
-    public TextMeshProUGUI name;
+    public WeaponStatus weaponStatus;
+    public TextMeshProUGUI bname;
     public TextMeshProUGUI level;
-    public TextMeshProUGUI weaponDamage;
     public TextMeshProUGUI bossDamge;
     public TextMeshProUGUI denyDefence;
-    public void Awake()
+    public void OnEnable()
     {
-        name.SetText(blueWeaponStatus.name);
-        level.SetText(blueWeaponStatus.level.ToString());
-        weaponDamage.SetText(blueWeaponStatus.weaponDamage.ToString());
-        bossDamge.SetText(blueWeaponStatus.bossDamage.ToString());
-        denyDefence.SetText(blueWeaponStatus.denyDefence.ToString());
+        bname.SetText(weaponStatus.blueWeapon);
+        level.SetText(weaponStatus.blueWeaponGrade);
+        bossDamge.SetText(weaponStatus.blueBossDamage.ToString());
+        denyDefence.SetText(weaponStatus.blueDenyDefence.ToString());
     }
 }

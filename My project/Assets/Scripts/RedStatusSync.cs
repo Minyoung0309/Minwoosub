@@ -3,18 +3,14 @@ using UnityEngine;
 
 public class RedStatusSync : MonoBehaviour
 {
-    public RedWeaponStatus redWeaponStatus;
-    public TextMeshProUGUI name;
+    public WeaponStatus weaponStatus;
+    public TextMeshProUGUI rname;
     public TextMeshProUGUI level;
     public TextMeshProUGUI weaponDamage;
-    public TextMeshProUGUI bossDamge;
-    public TextMeshProUGUI denyDefence;
-    public void Awake()
+    public void OnEnable()
     {
-        name.SetText(redWeaponStatus.name);
-        level.SetText(redWeaponStatus.level.ToString());
-        weaponDamage.SetText(redWeaponStatus.weaponDamage.ToString());
-        bossDamge.SetText(redWeaponStatus.bossDamage.ToString());
-        denyDefence.SetText(redWeaponStatus.denyDefence.ToString());
+        rname.SetText(weaponStatus.redWeapon);
+        level.SetText(weaponStatus.redWeaponLevel.ToString());
+        weaponDamage.SetText(weaponStatus.redWeaponDamage.ToString());
     }
 }

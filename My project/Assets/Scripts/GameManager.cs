@@ -1,22 +1,22 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     public int count = 0;
-    BossStatus bossStatus;
-    RedWeaponStatus redWeaponStatus;
-    BlueWeaponStatus blueWeaponStatus;
+    public int gold = 100;
+    public int enforceGold = 10;
+    public BossStatus bossStatus;
+    public WeaponStatus weaponStatus;
+    
     void Start()
     {
-
         bossStatus = gameObject.AddComponent<BossStatus>();
-        redWeaponStatus = GameObject.Find("RedWeapon").GetComponent<RedWeaponStatus>();
-        redWeaponStatus.initialize(1, 0, 0.3f);
-        blueWeaponStatus = GameObject.Find("BlueWeapon").GetComponent<BlueWeaponStatus>();
-        blueWeaponStatus.initialize(1, 2, 5);
+        weaponStatus = GameObject.Find("RedWeapon").GetComponent<WeaponStatus>();
+        weaponStatus.initialize();
     }
-
+   
     // Update is called once per frame
     //void Update()
     //{
@@ -28,6 +28,6 @@ public class GameManager : MonoBehaviour
     //        count = 0;
     //        Debug.Log("현재 체력 : " + Math.Ceiling(bossStatus.hp));
     //    }
-        
+
     //}
 }
